@@ -35,6 +35,7 @@ if sys.argv[1] == '-enc':
 
 	#Setting up the image size to work with encrypting the text
 	counter = 0
+	#Encrypting to the bottom right of the image
 	for i in range(pictureHeight-1, 0, -1):
 		for g in range(pictureWidth-1, 0, -1):
 			#Get RGB from each pixel
@@ -81,7 +82,7 @@ if sys.argv[1] == '-enc':
 		if counter == 32:
 			break
 
-	#Encrypting text into the image
+	#Encrypting text into the image at the bottom right corner
 	#Initializing loop counters	
 	loopCounter = 0
 	lCounter2 = 0
@@ -149,7 +150,7 @@ elif sys.argv[1] == '-dec':
 	#Obtain the size of the image
 	pictureWidth, pictureHeight = picture.size
   
-	#Getting the length of the text 
+	#Getting the length of the text that was encrypted at bottom right corner of image 
 	#Initializing counter and variable to store encrypted text length
 	loopCounter = 0    
 	enctextlength = ''
@@ -194,7 +195,7 @@ elif sys.argv[1] == '-dec':
 	enctext = ''
 	loopCounter2 = 0
 	jCount = 0
-	#Decryptying the actual text that was encrypted
+	#Decryptying the actual text that was encrypted at the bottom right corner of image
 	for k in range(pictureHeight-1, 0, -1):
 		for l in range(pictureWidth-1, 0, -1): 
 			#Get RGB at each pixel
