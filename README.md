@@ -36,9 +36,3 @@ python encdecImage.py -dec (name of encrypted image).png
 The terminal should then display what the encrypted text is and the length of that text that was encrypted.
 
 -----------------------------------------------------------------------------------------
-
-Output using the given testimage.png:
-Message:
-security is fun
-Message length:
-120
